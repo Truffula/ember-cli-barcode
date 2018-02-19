@@ -47,9 +47,10 @@ before_install:
   - npm --version
 
 before_script:
-  - npm install
+  
 
 script:
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
+  - npm install
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
