@@ -18,6 +18,7 @@
     "url": "https://github.com/maxwondercorn/ember-cli-barcode"
   },
   "ember-addon": {
+    "configPath": "tests/dummy/config",
     "demoURL": "https://maxwondercorn.github.io/ember-cli-barcode/"
   },
   "scripts": {
@@ -27,8 +28,11 @@
     "deploy": "ember build && ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
   },
   "dependencies": {
+    "broccoli-funnel": "^2.0.1",
+    "broccoli-merge-trees": "^2.0.0",
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-htmlbars": "^2.0.3"
+    "ember-cli-htmlbars": "^2.0.3",
+    "jsbarcode": "^3.8.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -54,8 +58,5 @@
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
-  },
-  "ember-addon": {
-    "configPath": "tests/dummy/config"
   }
 }
