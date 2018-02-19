@@ -11,6 +11,10 @@ dist: trusty
 addons:
   chrome: stable
 
+branches:
+  only:
+    develop
+    
 cache:
   directories:
     - $HOME/.npm
