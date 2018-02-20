@@ -36,12 +36,24 @@
 An ember-cli addon to render barcodes in Ember applications using the [JsBarcode](https://github.com/lindell/JsBarcode) library.  See the [demo](https://maxwondercorn.github.io/ember-cli-barcode/)
 
 ## Version Compatibilty
-ember-cli-barcode is compatible with Ember 2.4 onward and is passing tests for Ember 3.0
+ember-cli-barcode is compatible with Ember 2.4 onward and is passing tests for Ember 3.x.  
 
 ## Installation
 ```
   $ ember install ember-cli-barcode
 ```
+
+## Upgrading
+The 2.x release removes the use of bower and provides no new functionality.  To "upgrade" you should unistall you current version, remove the jsbarcode entry from bower.json and the install the current version.
+
+If you aren't using bower for any other dependicies you can delete bower.json
+
+```
+npm uninstall ember-cli-barcode --save-dev
+rm bower.json
+ember install ember-cli-barcode
+```
+
 ## Usage
 
 The simpliest form to render a barcode is to pass in a value using the defaults options.  This will generate a CODE128 barcode:
@@ -115,7 +127,7 @@ Or the background color can be changed:
 
 Any valid html or hexadecimal color can be used for the `lineColor` or `background` options. The component blockform is not supported.
 
-If you have many options, instead of passing a large number of parameters you can pass an object using the `options` parameter.  The options parameter will override any other parameters set on the component.
+If you have many options, instead of passing a large number of parameters you can pass an options object.  The options object will override any other parameters set on the component.
 
 ```
   // app/controllers/application.js
