@@ -38,9 +38,9 @@ module.exports = {
           'ember-source': '~2.16.0'
         },
         dependencies: {
-          'jsbarcode': '~3.8.0',
-          'broccoli-funnel': '^2.0.1',
-          'broccoli-merge-trees': '^2.0.0'
+          // 'jsbarcode': '~3.8.0',
+          // 'broccoli-funnel': '^2.0.1',
+          // 'broccoli-merge-trees': '^2.0.0'
         }
       }
     },
